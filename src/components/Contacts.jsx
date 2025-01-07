@@ -12,7 +12,7 @@ const Contacts = () => {
                     </span>
                     <a href="https://github.com/DashaTit">
                         <p >Перейти</p>
-                        <img src="/public/arrow.svg" alt="" />
+                        <img src="arrow.svg" alt="" />
                     </a>
                 </div>
 
@@ -22,7 +22,7 @@ const Contacts = () => {
                     </span>
                     <a href="https://t.me/arrya_dt">
                         <p >Перейти</p>
-                        <img src="/public/arrow.svg" alt="" />
+                        <img src="arrow.svg" alt="" />
                     </a>
                 </div>
             </div>
