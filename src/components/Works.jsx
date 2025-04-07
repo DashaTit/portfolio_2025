@@ -32,6 +32,11 @@ const Works = () => {
             img: "zeitplan-mini.png",
             link: "/"
         },
+        {
+            title: "Viniloff studio",
+            img: "viniloff-studio.ru_.png",
+            link: "https://viniloff-studio.ru/"
+        },
     ];
     return (
         <>
@@ -40,8 +45,8 @@ const Works = () => {
             </div>
 
             <div className="works__list">
-                {works.map((e) => (
-                    <Work item={e} />
+                {works.map((e, i) => (
+                    <Work key={i} item={e} />
                 ))}
             </div>
         </>

@@ -140,6 +140,83 @@ footer {
   border: #fff 1px solid;
 }
 
+.preloader {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.scene {
+  width: 200px;
+  height: 200px;
+  perspective: 600px; /* Добавляем перспективу для 3D-эффекта */
+  margin: auto auto;
+}
+
+/* Контейнер для кубика */
+.cube {
+  scale: .5;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d; /* Сохраняем 3D-пространство */
+  animation: rotate 3s linear infinite; /* Анимация вращения */
+}
+
+/* Стили для граней кубика */
+.face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #fff;
+}
+
+/* Позиционирование граней */
+.front {
+  transform: translateZ(100px);
+  background-size: 200px;
+}
+
+.back {
+  transform: rotateY(180deg) translateZ(100px);
+  background-size: 200px;
+}
+
+.right {
+  transform: rotateY(90deg) translateZ(100px);
+  background-size: 200px;
+}
+
+.left {
+  transform: rotateY(-90deg) translateZ(100px);
+
+  background-size: 200px;
+}
+
+.top {
+  transform: rotateX(90deg) translateZ(100px);
+
+  background-size: 200px;
+}
+
+.bottom {
+  transform: rotateX(-90deg) translateZ(100px);
+  background-size: 200px;
+}
+
+/* Анимация вращения */
+@keyframes rotate {
+  from {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
+}
+
+
 @media screen and (max-width: 1240px) {
   header p {
     font-size: 24px;

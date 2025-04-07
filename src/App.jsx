@@ -1,22 +1,15 @@
 import "./App.css";
-import Contacts from "./components/Contacts";
-import Header from "./components/Header";
-import Nav from "./components/Nav";
-import Works from "./components/Works";
+import React, {Suspense} from "react";
+import Preloader from "./components/Preloader.jsx";
 
+const LazyComponent = React.lazy(() => import('./components/Home.jsx'));
 function App() {
     return (
-        <>
-            <Nav />
-            <Header/>
-            <main className="container">
-                <Works/>
-                <Contacts/>
-            </main>
-            <footer>
-            <Nav />
-            </footer>
-        </>
+        <div>
+            <Suspense fallback={<Preloader />}>
+                <LazyComponent />
+            </Suspense>
+        </div>
     );
 }
 
